@@ -1,0 +1,13 @@
+
+<h1 class="border-bottom border-dark pt-4 pb-2">
+<%=@article.title %>
+<%= link_to edit_article_path do %>
+<i class="bi bi-pen"></i>
+<% end %>
+<%= link_to article_path(@article),
+            method: :delete,
+            data: { confirm: "Are you sure?" } do %>
+<i class="bi bi-trash"></i>
+<% end %>
+</h1>
+<h1><%=@article.content %></h1>

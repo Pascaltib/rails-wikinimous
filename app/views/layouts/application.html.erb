@@ -10,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar navbar-light bg-light row justify-content-between border border-grey">
+      <a class="col navbar-brand pl-3" href="<%= articles_path %>" style="color: #777; font-size: 18px; letter-spacing: 1px;">Wikinimous</a>
+      <a class="col nav-item text-right" href="<%= new_article_path %>" style="color: #777;">New Article</a>
+    </div>
+    <div class="container" style="width: 750px; margin: auto;">
+      <%= yield %>
+    </div>
   </body>
 </html>
